@@ -13,7 +13,7 @@ variable "instance_type" {
   default     = "t3.medium"
 }
 
-variable "my_enviroment" {
+variable "my_environment" {
   description = "Instance type for the EC2 instance"
   default     = "dev"
 }

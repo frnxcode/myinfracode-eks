@@ -31,7 +31,7 @@ module "eks" {
   access_entries = {
     # One access entry with a policy associated
     example = {
-      principal_arn = "arn:aws:iam::876997124628:user/terraform"
+      principal_arn = "arn:aws:iam::684779207098:user/terraform"
 
       policy_associations = {
         example = {
@@ -87,7 +87,7 @@ module "eks" {
 
   eks_managed_node_groups = {
 
-    tws-demo-ng = {
+    myinfracode-ng = {
       min_size     = 1
       max_size     = 3
       desired_size = 1
@@ -104,7 +104,7 @@ module "eks" {
       }
 
       tags = {
-        Name        = "tws-demo-ng"
+        Name        = "myinfracode-ng"
         Environment = "dev"
         ExtraTag    = "e-commerce-app"
       }

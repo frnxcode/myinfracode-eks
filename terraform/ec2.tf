@@ -12,8 +12,8 @@ data "aws_ami" "os_image" {
 }
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "terra-automate-key"
-  public_key = file("terra-key.pub")
+  key_name   = "myinfracode-eks-key"
+  public_key = file("~/.ssh/myinfracode-eks.pub")
 }
 
 resource "aws_security_group" "allow_user_to_connect" {
